@@ -8,19 +8,54 @@ h3 {
   font-size: 20px;
   font-weight: lighter;
 }
-h1 {
+.city-name {
   font-size: 50px;
   font-weight: lighter;
 }
+.current-location-button {
+  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 200;
+  font-size: 12px;
+  background-color: white;
+  color: black;
+  border: 0.5px solid black;
+  border-radius: 8px;
+  padding: 0px 5px;
+  position: relative;
+  top: -10px;
+  box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.15);
+  transition: all 500ms ease-in-out;
+  margin-left: 5px;
+}
+
+.current-location-button:hover {
+  background-color: #83868b;
+  color: white;
+  border: 0.5px solid black;
+}
+
+.weather-app {
+  padding: 15px 10px 10px 10px;
+  margin: 20px;
+  max-width: 650px;
+  border-radius: 10px;
+}
+.weather-app-main {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 15px 0px 5px 0px;
+  border-radius: 8px;
+}
 .temp {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 100;
+  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
 }
-.main {
-  margin: 0 auto;
-  display: block;
-  margin-top: 50px;
-}
+
 .search-bar {
   margin: 0 auto;
   display: block;
@@ -38,6 +73,28 @@ h1 {
   margin-top: 10px;
 }
 
+.weather-text {
+  margin: 0px;
+  padding: 0px;
+}
+
+.weather-units {
+  position: relative;
+  top: -32px;
+  font-weight: 200;
+  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #949494;
+}
+.weather-unit {
+  text-decoration: none;
+}
+
 .temp-emoji-parameters {
   font-size: 100px;
   width: 100%;
@@ -45,38 +102,51 @@ h1 {
 }
 
 .temp-emoji {
-  font-size: 60px;
+  font-size: 55px;
   text-align: center;
+  margin-right: 10px;
 }
 
-.mini-weather {
-  margin-left: 3px;
-}
-.card-body-mini-weather {
-  margin-top: 10px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-}
-
-.body-mini-weather {
+.mini-weather-main {
+  border: 1px solid #dadde1;
   padding: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  margin: 0px;
+  border-radius: 8px;
 }
 
 .mini-weather-emoji {
   font-size: 50px;
   text-align: center;
-  padding: 0px;
-  margin: 5px 20px;
+  width: 100%;
 }
 
-.parameters {
+.mini-weather-col {
+  border: 1px solid #dadde1;
+  padding: 15px 0px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.attributes {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.attributes-text {
   font-size: 15px;
   text-align: right;
+  margin: 0px;
 }
 
-.col-parameters {
-  padding: 0;
-  margin-right: 20px;
+.search-icon {
+  border: none;
+  outline: none;
+}
+.search-icon:active {
+  outline: none;
+  border: none;
+}
+
+#city-text {
+  text-transform: capitalize;
 }
