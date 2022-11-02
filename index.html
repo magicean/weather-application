@@ -20,126 +20,99 @@
   </head>
   <body>
     <div class="container">
-      <div class="card col-6 main">
-        <div class="card-body">
-          <!-- start of search bar -->
+      <div class="weather-app shadow-lg border-0">
+        <!-- start of search bar -->
 
-          <div class="row search-bar">
-            <div class="col-lg-12">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter a City"
-                />
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </span>
-              </div>
-              <!-- /input-group -->
-            </div>
-            <!-- /.col-lg-6 -->
+        <div class="row search-bar">
+          <div class="col-lg-12">
+            <form class="input-group" id="search-city">
+              <input
+                type="text"
+                class="form-control border-0 shadow-sm rounded"
+                placeholder="Enter a City"
+                autocomplete="off"
+                autofocus="on"
+                id="text-city"
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default search-icon" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </span>
+            </form>
           </div>
-          <!-- /.row -->
+        </div>
 
-          <!-- end of search bar -->
-          <!-- start of city info -->
+        <!-- end of search bar -->
 
-          <div class="card col-12 city-info">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-6">
-                  <h1>Montreal</h1>
-                </div>
-                <div class="col col-parameters">
-                  <i class="fa-solid fa-cloud temp-emoji-parameters"></i>
-                </div>
-              </div>
+        <!-- start of city info -->
+        <div class="weather-app-main">
+          <!-- row start-->
+          <div class="row">
+            <div class="col-8">
+              <span class="weather-text city-name" id="city-text"> </span>
+              <button class="btn current-location-button" id="current-location">
+                Current Location
+              </button>
 
-              <div class="row">
-                <div class="col">
-                  <h3>Friday, 11:37 a.m.</h3>
-                </div>
+              <h3 class="weather-text" id="date-time-today"></h3>
+              <h3 class="weather-text">Cloudy</h3>
+              <i class="fa-solid fa-cloud temp-emoji weather-text"></i>
+              <span class="temp weather-text" id="currentTemp"></span>
+              <span class="weather-units weather-text">
+                <a class="weather-unit" href="#" id="celsius">°C</a>
+                | <a class="weather-unit" href="#" id="fahrenheit">°F</a></span
+              >
+            </div>
 
-                <div class="col col-parameters">
-                  <h3 class="parameters">Precipitation: 2%</h3>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <h3>Cloudy</h3>
-                </div>
-                <div class="col col-parameters">
-                  <h3 class="parameters" style="margin-top: -10px">
-                    Humidity: 80%
-                  </h3>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <i class="fa-solid fa-cloud temp-emoji"
-                    ><span class="temp"> 13°</span></i
-                  >
-                </div>
-                <div class="col col-parameters">
-                  <h3 class="parameters" style="margin-top: -20px">
-                    Wind: 10 km/h
-                  </h3>
-                </div>
-              </div>
+            <div class="col-4">
+              <i class="fa-solid fa-cloud temp-emoji-parameters"></i>
+              <ul class="attributes">
+                <li>
+                  <h3 class="attributes-text">Precipitation: 2%</h3>
+                </li>
+                <li>
+                  <h3 class="attributes-text">Humidity: 80%</h3>
+                </li>
+                <li>
+                  <h3 class="attributes-text">Wind: 10 km/h</h3>
+                </li>
+              </ul>
             </div>
           </div>
-
-          <!-- end of city info -->
-
-          <div class="card col-12 city-info">
-            <div class="card-body card-body-mini-weather">
-              <div class="row">
-                <div class="card col" style="margin-left: 5px">
-                  <div class="card-body body-mini-weather">
-                    <h6>Saturday</h6>
-                    <i class="fa-solid fa-cloud-sun mini-weather-emoji"></i>
-                    <h6>17°</h6>
-                  </div>
-                </div>
-                <div class="card col mini-weather">
-                  <div class="card-body body-mini-weather">
-                    <h6>Sunday</h6>
-                    <i class="fa-solid fa-sun mini-weather-emoji"></i>
-                    <h6>14°</h6>
-                  </div>
-                </div>
-                <div class="card col mini-weather">
-                  <div class="card-body body-mini-weather">
-                    <h6>Monday</h6>
-                    <i class="fa-solid fa-cloud mini-weather-emoji"></i>
-                    <h6>13°</h6>
-                  </div>
-                </div>
-                <div class="card col mini-weather">
-                  <div class="card-body body-mini-weather">
-                    <h6>Tuesday</h6>
-                    <i class="fa-solid fa-cloud-rain mini-weather-emoji"></i>
-                    <h6>11°</h6>
-                  </div>
-                </div>
-                <div class="card col mini-weather" style="margin-right: 5px">
-                  <div class="card-body body-mini-weather">
-                    <h6>Wednesday</h6>
-                    <i
-                      class="fa-solid fa-cloud-sun-rain mini-weather-emoji"
-                    ></i>
-                    <h6>11°</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- row end-->
+        </div>
+        <!-- end of city info -->
+        <!-- start of mini weather -->
+        <div class="row mini-weather-main">
+          <div class="col mini-weather-col">
+            <h6>Saturday</h6>
+            <i class="fa-solid fa-cloud-sun mini-weather-emoji"></i>
+            <h6>17°</h6>
+          </div>
+          <div class="col mini-weather-col">
+            <h6>Sunday</h6>
+            <i class="fa-solid fa-sun mini-weather-emoji"></i>
+            <h6>14°</h6>
+          </div>
+          <div class="col mini-weather-col">
+            <h6>Monday</h6>
+            <i class="fa-solid fa-cloud mini-weather-emoji"></i>
+            <h6>13°</h6>
+          </div>
+          <div class="col mini-weather-col">
+            <h6>Tuesday</h6>
+            <i class="fa-solid fa-cloud-rain mini-weather-emoji"></i>
+            <h6>11°</h6>
+          </div>
+          <div class="col mini-weather-col">
+            <h6>Wednesday</h6>
+            <i class="fa-solid fa-cloud-sun-rain mini-weather-emoji"></i>
+            <h6>11°</h6>
           </div>
         </div>
       </div>
+
       <div class="gitlink">
         <a href="https://github.com/magicean/weather-application"
           >Open-source code</a
