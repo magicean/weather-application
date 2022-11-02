@@ -1,0 +1,82 @@
+h6 {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: lighter;
+}
+h3 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+h1 {
+  font-size: 50px;
+  font-weight: lighter;
+}
+.temp {
+  font-size: 40px;
+  font-weight: 100;
+}
+.main {
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+.search-bar {
+  margin: 0 auto;
+  display: block;
+  max-width: 90%;
+}
+
+.search-icon {
+  color: black;
+  font-size: 20px;
+}
+
+.city-info {
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.temp-emoji-parameters {
+  font-size: 100px;
+  width: 100%;
+  text-align: right;
+}
+
+.temp-emoji {
+  font-size: 60px;
+  text-align: center;
+}
+
+.mini-weather {
+  margin-left: 3px;
+}
+.card-body-mini-weather {
+  margin-top: 10px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.body-mini-weather {
+  padding: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.mini-weather-emoji {
+  font-size: 50px;
+  text-align: center;
+  padding: 0px;
+  margin: 5px 20px;
+}
+
+.parameters {
+  font-size: 15px;
+  text-align: right;
+}
+
+.col-parameters {
+  padding: 0;
+  margin-right: 20px;
+}
