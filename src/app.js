@@ -102,13 +102,23 @@ function tempToCelsius(event) {
 }
 
 function showInformation(response) {
+  console.log(response.data);
   let city = response.data.name;
   let temp = Math.round(response.data.main.temp);
+  let humid = response.data.main.humidity;
+  let weather = response.data.weather[0].main;
+  let wind = Math.round(response.data.wind.speed);
   let cityText = document.querySelector("#city-text");
   let temperature = document.querySelector("#currentTemp");
+  let humidity = document.querySelector("#humidity");
+  let weatherDesc = document.querySelector("#weather-desc");
+  let windSpeed = document.querySelector("#wind-speed");
+
   cityText.innerHTML = `${city}`;
   temperature.innerHTML = `${temp}`;
-
+  humidity.innerHTML = `Humidity: ${humid}%`;
+  windSpeed.innerHTML = `Wind: ${wind} mph`;
+  weatherDesc.innerHTML = `${weather}`;
   disableCelsius();
 }
 
