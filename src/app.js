@@ -1,5 +1,3 @@
-/*
-
 /* Function to format the current date and time */
 function formatDateToday(date) {
   let days = [
