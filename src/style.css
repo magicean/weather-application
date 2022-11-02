@@ -150,3 +150,7 @@ h3 {
 #city-text {
   text-transform: capitalize;
 }
+
+.gitlink {
+  margin-left: 30px;
+}
