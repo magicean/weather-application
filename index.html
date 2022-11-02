@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Project</title>
   </head>
   <body>
@@ -35,7 +37,11 @@
                 id="text-city"
               />
               <span class="input-group-btn">
-                <button class="btn btn-default search-icon" type="button">
+                <button
+                  class="btn btn-default search-icon"
+                  type="submit"
+                  id="search-button"
+                >
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </span>
@@ -50,7 +56,7 @@
           <!-- row start-->
           <div class="row">
             <div class="col-8">
-              <span class="weather-text city-name" id="city-text"> </span>
+              <span class="weather-text city-name" id="city-text"></span>
               <button class="btn current-location-button" id="current-location">
                 Current Location
               </button>

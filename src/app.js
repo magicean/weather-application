@@ -1,3 +1,5 @@
+/*
+
 /* Function to format the current date and time */
 function formatDateToday(date) {
   let days = [
@@ -124,7 +126,7 @@ function getPosition(position) {
   axios.get(weatherApiUrl).then(showInformation);
 }
 
-initiateGeolocator();
+searchCity("Tokyo");
 disableCelsius();
 let todayDate = new Date();
 let dateToday = document.querySelector("#date-time-today");
