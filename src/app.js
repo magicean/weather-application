@@ -1,3 +1,5 @@
+let coordinates = "";
+
 /* Function to format the current date and time */
 function formatDateToday(date) {
   let days = [
@@ -52,7 +54,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-  console.log(forecast);
 
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
@@ -79,8 +80,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-function getForecast(coordinates) {
-  let unit = "metric";
+function getForecast(coordinates, unit) {
   let apiKey = "ff1d9ea9376b5c27a82e04fc2b2abdbb";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=hourly,minutely,alerts&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(displayForecast);
@@ -128,13 +128,14 @@ function disableCelsius() {
 function tempToFahrenheit(event) {
   event.preventDefault();
 
-  let temp = document.getElementById("currentTemp").innerHTML;
-  let temperature = document.querySelector("#currentTemp");
+  let temp = document.getElementById("current-temp").innerHTML;
+  let temperature = document.querySelector("#current-temp");
 
-  let fahrenheit = Math.round(temp) * 1.8 + 32;
-  fahrenheit = Math.round(fahrenheit);
+  let fahrenheit = Math.round(Math.round(temp) * 1.8 + 32);
+
   temperature.innerHTML = `${fahrenheit}`;
 
+  getForecast(coordinates, "imperial");
   disableFahrenheit();
 }
 
@@ -142,29 +143,28 @@ function tempToFahrenheit(event) {
 function tempToCelsius(event) {
   event.preventDefault();
 
-  let temp = document.getElementById("currentTemp").innerHTML;
-  let temperature = document.querySelector("#currentTemp");
+  let temp = document.getElementById("current-temp").innerHTML;
+  let temperature = document.querySelector("#current-temp");
 
   let celsius = (Math.round(temp) - 32) * 0.5556;
   celsius = Math.round(celsius);
   temperature.innerHTML = `${celsius}`;
 
+  getForecast(coordinates, "metric");
   disableCelsius();
 }
 
 function showInformation(response) {
-  console.log(response.data);
   let city = response.data.name;
   let temp = Math.round(response.data.main.temp);
   let feels = Math.round(response.data.main.feels_like);
   let humid = response.data.main.humidity;
   let weather = response.data.weather[0].main;
   let wind = Math.round(response.data.wind.speed);
-
   let icon = response.data.weather[0].icon;
 
   let cityText = document.querySelector("#city-text");
-  let temperature = document.querySelector("#currentTemp");
+  let temperature = document.querySelector("#current-temp");
   let feelsLike = document.querySelector("#feels-like");
   let humidity = document.querySelector("#humidity");
   let weatherDesc = document.querySelector("#weather-desc");
@@ -183,8 +183,9 @@ function showInformation(response) {
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
+  coordinates = response.data.coord;
   disableCelsius();
-  getForecast(response.data.coord);
+  getForecast(coordinates, "metric");
 }
 
 function initiateGeolocator() {

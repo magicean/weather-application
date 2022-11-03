@@ -25,8 +25,8 @@
       <div class="weather-app shadow-lg border-0">
         <!-- start of search bar -->
 
-        <div class="row search-bar">
-          <div class="col-lg-12">
+        <div class="row">
+          <div class="col-11">
             <form class="input-group" id="search-city">
               <input
                 type="text"
@@ -47,6 +47,11 @@
               </span>
             </form>
           </div>
+          <div class="col-1">
+            <button class="btn current-location-button" id="current-location">
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
+          </div>
         </div>
 
         <!-- end of search bar -->
@@ -57,14 +62,11 @@
           <div class="row">
             <div class="col-8">
               <span class="weather-text city-name" id="city-text"></span>
-              <button class="btn current-location-button" id="current-location">
-                Current Location
-              </button>
 
               <h3 class="weather-text" id="date-time-today"></h3>
               <h3 class="weather-text" id="weather-desc">Cloudy</h3>
               <img src="" alt="" id="weather-icon" class="weather-icon" />
-              <span class="temp weather-text" id="currentTemp"></span>
+              <span class="temp weather-text" id="current-temp"></span>
               <span class="weather-units weather-text">
                 <a class="weather-unit" href="#" id="celsius">°C</a>
                 | <a class="weather-unit" href="#" id="fahrenheit">°F</a></span

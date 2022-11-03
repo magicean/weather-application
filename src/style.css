@@ -17,27 +17,20 @@ small {
   font-weight: lighter;
 }
 .current-location-button {
-  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 200;
-  font-size: 12px;
-  background-color: white;
-  color: black;
-  border: 0.5px solid black;
-  border-radius: 8px;
-  padding: 0px 5px;
-  position: relative;
-  top: -10px;
+  font-size: 20px;
+  color: #3f3f3f;
+  border: 0.5px solid #3f3f3f;
+  border-radius: 20px;
+  padding: 3px 10px;
   box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.15);
-  transition: all 500ms ease-in-out;
-  margin-left: 5px;
+  transition: all 25 0ms ease-in-out;
+  margin-left: -15px;
 }
 
 .current-location-button:hover {
-  background-color: #83868b;
+  background-color: #3f3f3f;
+  border: 0.5px solid #3f3f3f;
   color: white;
-  border: 0.5px solid black;
 }
 
 .weather-app {
@@ -63,11 +56,11 @@ small {
 .search-bar {
   margin: 0 auto;
   display: block;
-  max-width: 90%;
+  max-width: 60%;
 }
 
 .search-icon {
-  color: black;
+  color: #3f3f3f;
   font-size: 20px;
 }
 
@@ -138,6 +131,10 @@ small {
 .search-icon:active {
   outline: none;
   border: none;
+}
+
+.search-icon:hover {
+  color: #6f6f70;
 }
 
 #city-text {
