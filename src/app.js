@@ -114,7 +114,6 @@ function showInformation(response) {
   let weatherDesc = document.querySelector("#weather-desc");
   let windSpeed = document.querySelector("#wind-speed");
   let weatherIcon = document.querySelector("#weather-icon");
-  let bigWeatherIcon = document.querySelector("#big-weather-icon");
 
   cityText.innerHTML = `${city}`;
   temperature.innerHTML = `${temp}`;
