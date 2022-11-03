@@ -99,7 +99,7 @@ small {
   text-decoration: none;
 }
 
-.mini-weather-main {
+.weather-forecast {
   border: 1px solid #dadde1;
   padding: 0px;
   margin: 0px;
@@ -110,6 +110,7 @@ small {
   font-size: 50px;
   text-align: center;
   width: 100%;
+  margin-top: 5px;
 }
 
 .mini-weather-col {
@@ -145,4 +146,16 @@ small {
 
 .weather-icon {
   float: left;
+}
+
+.weather-forecast-max-temp {
+  margin-right: 10px;
+}
+
+.weather-forecast-min-temp {
+  opacity: 0.5;
+}
+
+.weather-forecast-temp {
+  margin-top: 10px;
 }
