@@ -113,6 +113,11 @@ small {
   border-radius: 8px;
 }
 
+.mini-weather-col:hover {
+  background-color: #f7f8f9b4;
+  font-weight: 600;
+}
+
 .attributes {
   list-style: none;
   margin-top: 130px;
