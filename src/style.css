@@ -122,11 +122,11 @@ small {
 
 .attributes {
   list-style: none;
-  margin-top: 140px;
+  margin-top: 130px;
 }
 
 .attributes-text {
-  font-size: 20px;
+  font-size: 17px;
   text-align: right;
   margin: 0px;
 }
@@ -146,6 +146,7 @@ small {
 
 .weather-icon {
   float: left;
+  margin-top: -15px;
 }
 
 .weather-forecast-max-temp {
@@ -154,8 +155,4 @@ small {
 
 .weather-forecast-min-temp {
   opacity: 0.5;
-}
-
-.weather-forecast-temp {
-  margin-top: 10px;
 }
