@@ -106,17 +106,27 @@ function showInformation(response) {
   let humid = response.data.main.humidity;
   let weather = response.data.weather[0].main;
   let wind = Math.round(response.data.wind.speed);
+  let icon = response.data.weather[0].icon;
+
   let cityText = document.querySelector("#city-text");
   let temperature = document.querySelector("#currentTemp");
   let humidity = document.querySelector("#humidity");
   let weatherDesc = document.querySelector("#weather-desc");
   let windSpeed = document.querySelector("#wind-speed");
+  let weatherIcon = document.querySelector("#weather-icon");
+  let bigWeatherIcon = document.querySelector("#big-weather-icon");
 
   cityText.innerHTML = `${city}`;
   temperature.innerHTML = `${temp}`;
   humidity.innerHTML = `Humidity: ${humid}%`;
   windSpeed.innerHTML = `Wind: ${wind} mph`;
   weatherDesc.innerHTML = `${weather}`;
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
+  disableCelsius();
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
   disableCelsius();
 }
 
