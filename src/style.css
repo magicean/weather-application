@@ -1,3 +1,13 @@
+body {
+  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+small {
+  font-weight: 200;
+}
+
 h6 {
   font-size: 15px;
   text-align: center;
@@ -18,7 +28,8 @@ small {
 .current-location-button {
   font-size: 20px;
   color: #3f3f3f;
-  border: 0.5px solid #3f3f3f;
+  background-color: #9cb9d167;
+  border: none;
   border-radius: 20px;
   padding: 3px 10px;
   box-shadow: 3px 5px 5px rgba(128, 128, 128, 0.15);
@@ -27,9 +38,9 @@ small {
 }
 
 .current-location-button:hover {
-  background-color: #3f3f3f;
-  border: 0.5px solid #3f3f3f;
-  color: white;
+  background-color: #9cb9d167;
+  border: none;
+  color: #ec6e4c;
 }
 
 .weather-app {
@@ -39,17 +50,15 @@ small {
   border-radius: 10px;
 }
 .weather-app-main {
-  border: 1px solid #dadde1;
+  border: none;
   padding: 15px;
   margin: 15px 0px 5px 0px;
   border-radius: 8px;
+  background-color: #9cb9d167;
 }
 .temp {
   font-size: 60px;
   font-weight: 100;
-  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .search-bar {
@@ -61,6 +70,10 @@ small {
 .search-icon {
   color: #3f3f3f;
   font-size: 20px;
+}
+
+.search-icon:hover {
+  color: #ec6e4c;
 }
 
 .city-info {
@@ -78,9 +91,6 @@ small {
   position: relative;
   top: -32px;
   font-weight: 200;
-  font-style: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-    "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
 }
 .disabled {
   pointer-events: none;
@@ -90,24 +100,28 @@ small {
 .weather-unit {
   text-decoration: none;
 }
+.weather-unit:hover {
+  color: #ec6e4c;
+}
 
 .weather-forecast {
-  border: 1px solid #dadde1;
+  border: none;
   padding: 0px;
   margin: 0px;
   border-radius: 8px;
 }
 
 .mini-weather-col {
-  border: 1px solid #dadde1;
+  border: none;
   padding: 15px 0px;
-  margin: 5px;
+  margin: 3px;
   border-radius: 8px;
-  font-weight: 100;
+  font-weight: 200;
+  background-color: #9cb9d167;
 }
 
 .mini-weather-col:hover {
-  background-color: #d9d9da94;
+  background-color: #ec6f4c37;
   font-weight: 300;
 }
 
@@ -134,10 +148,6 @@ small {
 .search-icon:active {
   outline: none;
   border: none;
-}
-
-.search-icon:hover {
-  color: #959596;
 }
 
 #city-text {
