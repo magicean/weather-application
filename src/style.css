@@ -59,6 +59,8 @@ small {
 .temp {
   font-size: 60px;
   font-weight: 100;
+  position: relative;
+  top: -10px;
 }
 
 .search-bar {
@@ -178,4 +180,50 @@ small {
 
 .forecast-day {
   text-align: center;
+}
+
+.switch-field {
+  display: flex;
+  float: inline-start;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.switch-field label {
+  background-color: rgba(255, 255, 255, 0.496);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 6px;
+  border: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #ec6e4c;
+  color: rgba(255, 255, 255, 0.752);
+  box-shadow: none;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 4px 4px 0;
 }

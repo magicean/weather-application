@@ -64,12 +64,35 @@
               <span class="weather-text city-name" id="city-text"></span>
               <h3 class="weather-text" id="date-time-today"></h3>
               <h3 class="weather-text" id="weather-desc"></h3>
-              <img src="" alt="" id="weather-icon" class="weather-icon" />
-              <span class="temp weather-text" id="current-temp"></span>
-              <span class="weather-units weather-text">
-                <a class="weather-unit" href="#" id="celsius">°C</a>
-                | <a class="weather-unit" href="#" id="fahrenheit">°F</a></span
-              >
+              <div class="row">
+                <div class="col-3">
+                  <img src="" alt="" id="weather-icon" class="weather-icon" />
+                </div>
+                <div class="col-2">
+                  <span class="temp weather-text" id="current-temp"></span>
+                </div>
+                <div class="col-1">
+                  <span class="switch-field">
+                    <input
+                      type="radio"
+                      id="radio-one"
+                      name="switch-one"
+                      value="celsius"
+                      onclick="tempToCelsius()"
+                      checked
+                    />
+                    <label for="radio-one">C°</label>
+                    <input
+                      type="radio"
+                      id="radio-two"
+                      name="switch-one"
+                      value="fahrenheit"
+                      onclick="tempToFahrenheit();"
+                    />
+                    <label for="radio-two">F°</label>
+                  </span>
+                </div>
+              </div>
             </div>
 
             <div class="col-4">

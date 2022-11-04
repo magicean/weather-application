@@ -107,28 +107,8 @@ function handleSubmit(event) {
   }
 }
 
-/* Function to diable the Fahrenheit Button */
-function disableFahrenheit() {
-  let disablefahrenheit = document.getElementById("fahrenheit");
-  disablefahrenheit.classList.add("disabled");
-
-  let enablecelsius = document.getElementById("celsius");
-  enablecelsius.classList.remove("disabled");
-}
-
-/* Function to diable the Celsius Button */
-function disableCelsius() {
-  let disablecelsius = document.getElementById("celsius");
-  disablecelsius.classList.add("disabled");
-
-  let enablefahrenheit = document.getElementById("fahrenheit");
-  enablefahrenheit.classList.remove("disabled");
-}
-
 /* Function to convert the temperature to Fahrenheit */
-function tempToFahrenheit(event) {
-  event.preventDefault();
-
+function tempToFahrenheit() {
   let temp = document.getElementById("current-temp").innerHTML;
   let temperature = document.querySelector("#current-temp");
 
@@ -137,13 +117,10 @@ function tempToFahrenheit(event) {
   temperature.innerHTML = `${fahrenheit}`;
 
   getForecast(coordinates, "imperial");
-  disableFahrenheit();
 }
 
 /* Function to convert the temperature to Celsius */
-function tempToCelsius(event) {
-  event.preventDefault();
-
+function tempToCelsius() {
   let temp = document.getElementById("current-temp").innerHTML;
   let temperature = document.querySelector("#current-temp");
 
@@ -152,7 +129,6 @@ function tempToCelsius(event) {
   temperature.innerHTML = `${celsius}`;
 
   getForecast(coordinates, "metric");
-  disableCelsius();
 }
 
 function showInformation(response) {
@@ -185,7 +161,8 @@ function showInformation(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
   coordinates = response.data.coord;
-  disableCelsius();
+  radiobutton = document.getElementById("radio-one");
+  radiobutton.checked = true;
   getForecast(coordinates, "metric");
 }
 
@@ -204,18 +181,18 @@ function getPosition(position) {
 }
 
 searchCity("Tokyo");
-disableCelsius();
+//disableCelsius();
 let todayDate = new Date();
 let dateToday = document.querySelector("#date-time-today");
 dateToday.innerHTML = formatDateToday(todayDate);
 
-/* When the Fahrenheit Button is Clicked */
+/* 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", tempToFahrenheit);
 
-/* When the Celsius Button is Clicked */
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", tempToCelsius);
+*/
 
 /* When the Current Location Button is Clicked */
 let currentLocation = document.querySelector("#current-location");
