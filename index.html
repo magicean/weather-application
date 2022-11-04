@@ -62,9 +62,8 @@
           <div class="row">
             <div class="col-8">
               <span class="weather-text city-name" id="city-text"></span>
-
               <h3 class="weather-text" id="date-time-today"></h3>
-              <h3 class="weather-text" id="weather-desc">Cloudy</h3>
+              <h3 class="weather-text" id="weather-desc"></h3>
               <img src="" alt="" id="weather-icon" class="weather-icon" />
               <span class="temp weather-text" id="current-temp"></span>
               <span class="weather-units weather-text">
@@ -76,16 +75,23 @@
             <div class="col-4">
               <ul class="attributes">
                 <li>
-                  <h3 class="attributes-text" id="feels-like">
-                    Feels-like: 80%
+                  <h3 class="attributes-text">
+                    Feels-like:
+                    <span class="attributes-value" id="feels-like"></span>
                   </h3>
                 </li>
 
                 <li>
-                  <h3 class="attributes-text" id="humidity">Humidity: 80%</h3>
+                  <h3 class="attributes-text">
+                    Humidity:
+                    <span class="attributes-value" id="humidity"></span>
+                  </h3>
                 </li>
                 <li>
-                  <h3 class="attributes-text" id="wind-speed">Wind: 10 km/h</h3>
+                  <h3 class="attributes-text">
+                    Wind:
+                    <span class="attributes-value" id="wind-speed"></span>
+                  </h3>
                 </li>
               </ul>
             </div>

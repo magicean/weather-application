@@ -62,21 +62,22 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `<div class="col mini-weather-col">
-              <h6>${formatDay(forecast[i].dt)}</h6>
+              <div class="forecast-day"><span>${formatDay(
+                forecast[i].dt
+              )}</span></div>
               <img src="http://openweathermap.org/img/wn/${
                 forecast[i].weather[0].icon
-              }@2x.png" alt=""  class="weather-icon"/>
-              <h6>
+              }@2x.png" alt="" class="weather-forecast-icon"/>
+              <div class="weather-forecast-temp">
                 <span class="weather-forecast-max-temp">${Math.round(
                   forecast[i].temp.max
                 )}°</span
                 ><span class="weather-forecast-min-temp">${Math.round(
                   forecast[i].temp.min
                 )}°</span>
-              </h6>
+              </div>
             </div></div>`;
   }
-  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -173,9 +174,9 @@ function showInformation(response) {
 
   cityText.innerHTML = `${city}`;
   temperature.innerHTML = `${temp}`;
-  feelsLike.innerHTML = `Feels-like: ${feels}°`;
-  humidity.innerHTML = `Humidity: ${humid}%`;
-  windSpeed.innerHTML = `Wind: ${wind} mph`;
+  feelsLike.innerHTML = `${feels}°`;
+  humidity.innerHTML = `${humid}%`;
+  windSpeed.innerHTML = `${wind} km/h`;
   weatherDesc.innerHTML = `${weather}`;
   weatherIcon.setAttribute(
     "src",

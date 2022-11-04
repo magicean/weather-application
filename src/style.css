@@ -2,11 +2,10 @@ h6 {
   font-size: 15px;
   text-align: center;
   margin-top: 5px;
-  font-weight: lighter;
 }
 h3 {
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: 150;
 }
 small {
   margin-left: 35px;
@@ -14,7 +13,7 @@ small {
 
 .city-name {
   font-size: 50px;
-  font-weight: lighter;
+  font-weight: 200;
 }
 .current-location-button {
   font-size: 20px;
@@ -99,36 +98,35 @@ small {
   border-radius: 8px;
 }
 
-.mini-weather-emoji {
-  font-size: 50px;
-  text-align: center;
-  width: 100%;
-  margin-top: 5px;
-}
-
 .mini-weather-col {
   border: 1px solid #dadde1;
   padding: 15px 0px;
   margin: 5px;
   border-radius: 8px;
+  font-weight: 100;
 }
 
 .mini-weather-col:hover {
-  background-color: #f7f8f9b4;
-  font-weight: 600;
+  background-color: #d9d9da94;
+  font-weight: 300;
 }
 
 .attributes {
   list-style: none;
   margin-top: 130px;
+  margin-left: 30px;
 }
 
 .attributes-text {
   font-size: 17px;
   text-align: right;
   margin: 0px;
+  font-weight: 300;
+  text-align: left;
 }
-
+.attributes-value {
+  font-weight: 100;
+}
 .search-icon {
   border: none;
   outline: none;
@@ -139,7 +137,7 @@ small {
 }
 
 .search-icon:hover {
-  color: #6f6f70;
+  color: #959596;
 }
 
 #city-text {
@@ -157,4 +155,17 @@ small {
 
 .weather-forecast-min-temp {
   opacity: 0.5;
+}
+
+.weather-forecast-icon {
+  margin-top: -20px;
+}
+
+.weather-forecast-temp {
+  margin-top: -10px;
+  text-align: center;
+}
+
+.forecast-day {
+  text-align: center;
 }
